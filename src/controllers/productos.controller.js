@@ -105,3 +105,13 @@ async function search(req, res) {
 
   return res.json(resultados);
 }
+
+module.exports = {
+  getAll,
+  getAllVisible,
+  getById,
+  create,
+  update,
+  remove,
+  search
+}
