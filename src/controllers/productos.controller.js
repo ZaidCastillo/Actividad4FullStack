@@ -102,8 +102,6 @@ async function search(req, res) {
       page: page !== undefined ? parseInt(page, 10) : undefined,
       limit: limit !== undefined ? parseInt(limit, 10) : undefined
   });
-  if (resultados.length === 0) {
-    return res.status(404).json({ error: 'No se encontraron productos.' });
-  }
-    return res.json(resultados);
+
+  return res.json(resultados);
 }
