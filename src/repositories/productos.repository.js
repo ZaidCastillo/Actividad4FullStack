@@ -53,6 +53,8 @@ class ProductosRepository {
     const filters = [];
     const values = [];
     let idx = 1;
+    filters.push('activo = true');
+
 
     if (nombre) {
       filters.push(`nombre ILIKE $${idx++}`);
